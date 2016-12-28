@@ -1,3 +1,14 @@
 <h1>
   {{title}}
 </h1>
+
+<ngx-charts-number-card
+      *ngIf="stats"
+      [view]="resolution"
+      [scheme]="colors"
+      [results]="stats">
+    </ngx-charts-number-card>
+
+<pre>
+  {{ stats | json }}
+</pre>
