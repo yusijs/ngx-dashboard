@@ -6,7 +6,8 @@
   "author": "Gogs <gogs@fake.local>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && cd charts && ng build --prod"
+    "build": "tsc && cd charts && ng build --prod",
+    "start": "concurrently \"tsc -w\" \"cd charts && ng build -o dist -w\" "
   },
   "dependencies": {
     "express": "^4.14.0",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/express": "^4.0.34",
     "@types/node": "^6.0.54",
-    "@types/socket.io": "^1.4.27"
+    "@types/socket.io": "^1.4.27",
+    "concurrently": "^3.1.0"
   }
 }
